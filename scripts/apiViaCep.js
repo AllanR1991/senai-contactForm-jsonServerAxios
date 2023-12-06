@@ -11,6 +11,7 @@ function limpa_formulario_cep() {
     elementoBairro.value = ("");
     elementoCidade.value = ("");
     elementoEstado.value = ("");
+    elementoComplemento.value = ("");
 }
 
 async function buscaEMostraCep(valor) {
@@ -25,6 +26,7 @@ async function buscaEMostraCep(valor) {
             elementoBairro.value = ("...");
             elementoCidade.value = ("...");
             elementoEstado.value = ("...");
+            elementoComplemento.value =("...");
             const buscaApiViaCep = await fetch(`https://viacep.com.br/ws/${cepApenasNumero}/json/`);
             const cep = await buscaApiViaCep.json();
             console.log(cep);
